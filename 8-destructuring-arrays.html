@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Arrays</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["Haseeb", 22, "IT"];
+        let [name, age, profession] = arr1;
+        document.write(name + "<br>");
+        document.write(age + "<br>");
+        document.write(profession + "<br>");
+
+
+        let arr2 = ["Yousaf", 55,["Self Employed", "Buisness"] , "Shop"];
+        let [name2, age2, [profession2, profession3], profession4] = arr2;
+        document.write(name2 + "<br>");
+        document.write(age2 + "<br>");
+        document.write(profession2 + "<br>");
+        document.write(profession3 + "<br>");
+        document.write(profession4 + "<br>");
+
+
+        //setting default value
+        let arr3 = ["Sami", "Yousaf", 20, "BioTech"];
+        function func1([fname, lname, age3=10, degree]){
+            console.log(fname);
+            console.log(lname);
+            console.log(age3);
+            console.log(degree);
+        }
+        func1(arr3);
+
+
+        function func2(){
+            return ["Haseeb", 22, "IT"];
+        }
+        let [name3, age4, degree2] = func2();
+        document.write("<br>" + name3 + "<br>");
+        document.write(age4 + "<br>");
+        document.write(degree2 + "<br>");
+    </script>
+</body>
+</html>

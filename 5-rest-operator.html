@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rest Operator</title>
+</head>
+<body>
+    <script>
+        function sum(name, degree, ...args){
+            document.write(`Hello ${name} of ${degree} :`);
+            let sum = 0;
+            for(let i in args){
+                sum +=args[i];
+            }
+            document.write(sum + "</br>");
+        }
+        sum("Haseeb Yousaf","BS IT",10,20,30);
+        sum("Sami Yousaf", "BS Biotechnology",55,55,55);
+    </script>
+</body>
+</html>

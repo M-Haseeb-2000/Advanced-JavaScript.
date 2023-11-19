@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...args){    //rest-operator
+            console.log(arguments);
+            var sumOfNums = 0;
+            for(let i in args){
+                sumOfNums += args[i];
+            }
+            document.write(`Hello ${name} : ${sumOfNums}` + "<br>");
+        }
+        var myArray = [1,2,3,4,5,5];
+        sum("Haseeb", ...myArray);  //spread operator
+        sum("Yousaf", ...myArray);
+
+
+        var arr1 = [1,1,1,1];
+        var arr2 = [...arr1];   //if you spread the array and again make it array by using [] then it will create a new array instead of creating a clone of previous array
+        arr1.push(50);
+        console.log(arr2);
+
+
+        var arr3 = [2,2,2,2];
+        var arr4 = [3,3,3,3];
+        var arr5 = [1, ...arr3, ...arr4, 4];    //with spread operator you can concatenates extisting two arrays into a new array with the addition of some new elements to the new array in same line
+        console.log(arr5);
+
+
+        var obj1 = {
+            name : "Haseeb"
+        }
+        var obj2 = {
+            age : 22
+        }
+        var obj3 = {...obj1, ...obj2};  //with spread operator you can spread two objects and again make their new object containing the elements of both prior two
+        console.log(obj3);
+    </script>
+</body>
+</html>

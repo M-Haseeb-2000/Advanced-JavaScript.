@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iterators</title>
+</head>
+<body>
+    <script>
+        function numberIterator(arr){
+            var nextNum = 0;
+            return {
+                next(){
+                    if(nextNum<arr.length){
+                        return{
+                            value : arr[nextNum++],
+                            done : false
+                        }
+                    }else{
+                        return{
+                            done : true
+                        }
+                    }
+                }
+            }
+        }
+        let numbers = [10,20,30,40,50];
+        let num = numberIterator(numbers);
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log(num.next());
+        console.log("Break between self made iterator and JavaScrip ES 6 version");
+
+
+
+
+
+        var list = [100, 200, 300];
+        var iter = list[Symbol.iterator]();
+        console.log(iter.next());
+        console.log(iter.next().value);
+        console.log(iter.next());
+        console.log(iter.next());
+    </script>
+</body>
+</html>

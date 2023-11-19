@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>template string or template literal</title>
+</head>
+<body>
+    <script>
+        var marks = 450;
+        function name(){
+            var firstName = "Haseeb";
+            var lastName = "Yousaf";
+            return firstName + lastName;
+        }
+        var myLiteral = `Hello "${name()}". You have got ${marks} marks in overall rating`;
+        document.write(myLiteral);
+    </script>
+</body>
+</html>

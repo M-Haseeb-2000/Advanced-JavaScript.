@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>symbol()</title>
+</head>
+<body>
+    <script>
+        var x1 = Symbol("Hello");
+        var x2 = Symbol("Hello");
+        console.log(x1===x2);
+        console.log(x1.description);
+
+        var obj = {
+            name : "Haseeb",
+            class : "IT",
+            [x1] : "No Hello"
+        }
+        console.log(obj[x1]);
+    </script>
+</body>
+</html>

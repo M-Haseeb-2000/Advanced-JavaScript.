@@ -1,0 +1,5 @@
+This is the txt file for fetch.
+This is the second line of that file.
+This is the third line of that file.
+This is the fourth line of that file.
+This is the fifth line of that file.

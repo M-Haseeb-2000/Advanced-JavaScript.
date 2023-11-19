@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>var let and const variables</title>
+</head>
+<body>
+    <script>
+        //var can be re declared and redefined
+        var a = 10;
+        var a = 7;
+        a = 8;
+        //var has a global scope
+        if(true){
+            var a = 10;
+        }
+        document.write("Global Scope");
+        
+        //let can be redefined but cannot be redeclared
+        let b = 9;
+        b = 10;
+        //let has a block scope
+        if(true){
+            let b = 1;
+        }
+
+        //const can neither redeclared nor redefined
+        const c = 3;
+        //const has a block scope
+        if(true){
+            const d = 45;
+        }
+    </script>
+</body>
+</html>

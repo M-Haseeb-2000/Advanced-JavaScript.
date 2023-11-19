@@ -1,0 +1,1 @@
+This is the replaced text that has been fetched from another file.

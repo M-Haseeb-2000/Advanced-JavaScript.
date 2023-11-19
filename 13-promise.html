@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <script>
+        // let complete = false;
+        // var prom = new Promise(function(resolve, reject){
+        //     if (complete) {
+        //         resolve("I am successful");
+        //     } else {
+        //         reject("I am unsuccessful");
+        //     }
+        // });
+        // console.log(prom);
+
+
+        // function prom(complete){
+        //     return new Promise(function(resolve, reject){
+        //         console.log("I am pending");
+        //     setTimeout(() => {
+        //         if (complete) {
+        //         resolve("I am successful");
+        //     } else {
+        //         reject("I am unsuccessful");
+        //     }
+        //     }, 5000);
+        //     });
+        // }
+        // let onFulfillment = (result) => {
+        //     console.log(result);
+        // }
+        // let onRejection = (error) => {
+        //     console.log(error);
+        // }
+        // prom(true).then(onFulfillment).catch(onRejection);
+        
+
+
+        
+        function prom(complete){
+            return new Promise(function(resolve, reject){
+                console.log("I am pending");
+            setTimeout(() => {
+                if (complete) {
+                resolve("I am successful");
+            } else {
+                reject("I am unsuccessful");
+            }
+            }, 5000);
+            });
+        }
+        let onFulfillment = (result) => {
+            console.log(result);
+        }
+        let onRejection = (error) => {
+            console.log(error);
+        }
+        prom(true).then(onFulfillment).catch(onRejection);
+    </script>
+</body>
+</html>

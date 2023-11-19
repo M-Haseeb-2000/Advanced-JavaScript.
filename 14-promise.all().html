@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise.all()</title>
+</head>
+<body>
+    <script>
+        
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`First Promise has been resolved`);
+        //         resolve(10);
+        //     }, 1 * 1000);
+        // });
+        // let p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`Second Promise has been resolved`);
+        //         resolve(20);
+        //     }, 2 * 1000);
+        // });
+        // let p3 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log(`Third Promise has been resolved`);
+        //         resolve(30);
+        //     }, 3 * 1000);
+        // });
+        // Promise.all([p1,p2,p3]).then((result)=>{
+        //     let total = 0;
+        //     console.log(result);
+        //     console.log(typeof result[1]);
+        //     for (let i = 0; i < result.length; i++) {
+        //         total += result[i];
+        //     }
+            
+        //     console.log(total);
+        // });
+
+
+        let promiseCall = function (returnData, message) {
+            return function(resolve, reject){
+                setTimeout(() => {
+                    console.log(`${message} has been resolved!`);
+                    resolve(returnData);
+                }, returnData * 100);
+            }
+        }
+        let p1 = new Promise(promiseCall(10,"First"));
+        let p2 = new Promise(promiseCall(20,"Second"));
+        let p3 = new Promise(promiseCall(30,"Third"));
+        Promise.all([p1,p2,p3]).then((result)=>{
+            var total = 0;
+            for (let index = 0; index < result.length; index++) {
+                total += result[index];
+            }
+            console.log(`Total : ${total}`);
+        })
+    </script>
+</body>
+</html>

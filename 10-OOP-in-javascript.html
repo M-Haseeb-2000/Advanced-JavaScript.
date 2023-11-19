@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+        class Student{
+            //constructor method
+            constructor(name, age){
+                this.studentName = name;
+                this.studentAge = age;
+                console.log("constructor method");
+            }
+            //prototype method
+            message(){
+                console.log(`Hello ${this.studentName}<br>Your age is ${this.studentAge}`);
+            }
+            //static method
+            static sorry(){
+                console.log("Static Method");
+            }
+        }
+        var a = new Student("Haseeb", 22);
+        a.message();
+        Student.sorry();
+    </script>
+</body>
+</html>

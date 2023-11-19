@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objet literals</title>
+</head>
+<body>
+    <script>
+        //if you have defined a variable like
+        var name = "Haseeb";
+        var hoby = "freefire";
+        var clas = 15;
+        // and same variable you want to give in place of object value then you donot need to enter key and value pair, below is the shortcut
+        var obj1 = {
+            name,
+            clas
+        }
+        console.log(obj1);
+
+        //you can also use a defined variable value as the name of key of object as below
+        var obj2 = {
+            [name] : "Yousaf",
+            [hoby + "Playing"] : "play",
+            line : function(){
+                console.log(`${this.name} : class of ${this.freefirePlaying}`);
+            }
+        }
+        console.log(obj2);
+        obj2.line();
+
+
+        //below are three new ways of function in object
+        let obj3 = {
+            func1 : function(){
+                return "Hello Haseeb Yousaf";
+            },
+            func2(){
+                return "How are you doing";
+            },
+            'func3 new'(){
+                "Nice to meet you"
+            }
+        }
+        console.log(obj3['func1']());
+        console.log(obj3.func2());
+        console.log(obj3["func3 new"]());
+
+        // a function can return an object like this way
+        var fname = "Haseeb";
+        var lname = "Yousaf";
+        var degree = "BS IT";
+        function mySelf(){
+            return {fname, lname, degree};
+        }
+        console.log(mySelf(fname, lname, degree));
+        var s = mySelf(fname, lname, degree);
+        console.log(s.fname);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Inheritance</title>
+</head>
+<body>
+    <script>
+        /*class Manager{
+            constructor(name){
+                this.Name = name;
+                console.log("Hello" + name);
+            }
+            message(){
+                console.log(`Hello ${this.Name}`)
+            }
+        }
+        class Employee extends Manager{
+            constructor(name){
+                super(name);
+                console.log("Hello" + name);
+            }
+            info(){
+                console.log(`Employee : ${this.Name}`)
+            }
+        }
+        var b = new Manager("ssmi");
+        b.message();
+        var a = new Employee("Haseeb");
+        a.message();
+        a.info();*/
+
+
+
+        class Employee{
+            constructor(name,age,salary){
+                this.Name = name;
+                this.Age = age;
+                this.Salary = salary;
+            }
+            employee_info(){
+                document.write(`
+                <h3>Hello ${this.Name}!</h3>
+                <p>How are you!</p>
+                <p>Your age is ${this.Age}</p>
+                <p>Your Salary is ${this.Salary}</p>`);
+            }
+        }
+        class Manager extends Employee{
+            info(){
+                let ca = 2000;
+                let ta = 20000;
+                let totalSalary = this.Salary + ca + ta;
+                console.log(this.Salary);
+                console.log(totalSalary);
+                document.write(`
+                <h3>Hello ${this.Name}!</h3>
+                <p>How are you!</p>
+                <p>Your age is ${this.Age}</p>
+                <p>Your Salary is ${totalSalary}</p>`);
+            }
+        }
+        var employee = new Employee("Haseeb", 22, 20000);
+        employee.employee_info();
+        var manager = new Manager("Sami",20, 100000);
+        manager.info();
+    </script>
+</body>
+</html>

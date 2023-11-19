@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Arrow function</title>
+</head>
+<body>
+    <script>
+        //normal function
+        let normalFunction = function ABC(one,two){
+            return one + two;
+        }
+        ABC("THis is the first string </br>", "This is the second string");
+        document.write(normalFunction);
+
+        let secondFunction = function(age){
+            return `My age is ${age} years`;
+        }
+        document.write(secondFunction(23));
+        //arrow function
+        let arrowFunction = (three, four) => {return three+four};
+        console.log(arrowFunction("three ", "four"));
+        
+    </script>
+</body>
+</html>

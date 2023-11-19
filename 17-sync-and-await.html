@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sync and await</title>
+</head>
+<body>
+    <script>
+        async function func() {
+            const response = await fetch('fetch2.json');
+            const message = await response.json();
+            return message;
+        }
+        func().then((res)=>{
+            document.write("<table border='2'>");
+            for(var i in res){
+                document.write("<tr>");
+                let a = `<td>${res[i].name}</td><td>${res[i].city}</td><td>${res[i].age}</td>`;
+                document.write(a);
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        })
+        .catch((error) => console.log("Can't fetch files"));
+    </script>
+</body>
+</html>

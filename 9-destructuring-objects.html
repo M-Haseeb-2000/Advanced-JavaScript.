@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Arrays</title>
+</head>
+<body>
+    <script>
+        //properties names must be same
+        var obj1 = {
+            name : "Haseeb",
+            age : 22,
+            clas : "IT"
+        }
+        var {name, age, clas} = obj1;
+        console.log(name);
+        console.log(age);
+        console.log(clas);
+
+
+        //if you donot want any value to assign to any variable leave the spot empty for that
+        var obj2 = {
+            name : "Yousaf",
+            age : 55,
+            profession : "Buisness"
+        }
+        var {name, age} = obj2;
+        console.log(name);
+
+
+
+        //alias in object destructuring
+        var obj3 = {
+            name : "Sami",
+            religion : "Islam"
+        }
+        var {name : n, religion : r} = obj3;
+        console.log(n);
+        console.log(r);
+    </script>
+</body>
+</html>

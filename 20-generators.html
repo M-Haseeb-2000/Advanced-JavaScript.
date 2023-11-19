@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generators</title>
+</head>
+<body>
+    <script>
+        // function *generateIt(){
+        //     yield console.log("Message 1");
+        //     yield console.log("Message 2");
+        //     yield console.log("Message 3");
+        // }
+        // let gen = generateIt();
+        // gen.next();
+        // gen.next();
+        // gen.next();
+        // gen.next();
+
+
+
+
+        // function *generateIt2(){
+        //     let result = (yield) * 10;
+        //     console.log(`Result : ${result}`);
+        // }
+        // let gen2 = generateIt2();
+        // gen2.next();
+        // gen2.next(10);
+        // gen2.next(20);
+        // gen2.next(30);
+
+
+
+
+        // function *generateIt3(){
+        //     yield 55;
+        //     yield* ['Node JS','React JS','Angular JS'];
+        // }
+        // let g = generateIt3();
+        // console.log(g.next().value);
+        // console.log(g.next().value);
+        // console.log(g.next());
+        // console.log(g.next());
+
+
+
+
+        function *generateIt3(){
+            yield 55;
+            yield* ['Node JS','React JS','Angular JS'];
+        }
+        let g = generateIt3();
+        console.log(g.next().value);
+        console.log(g.return("Ending"));
+        console.log(g.next());
+    </script>
+</body>
+</html>
